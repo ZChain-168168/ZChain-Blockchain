@@ -317,7 +317,7 @@ func (j *JSONRPC) handleGetRequest(writer io.Writer) {
 	data := &GetResponse{
 		Name:    j.config.ChainName,
 		ChainID: j.config.ChainID,
-		Version: "versioning.Version",
+		Version: versioning.Version,
 	}
 
 	resp, err := json.Marshal(data)
